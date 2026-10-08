@@ -1102,3 +1102,292 @@ p:last-child {
     grid-template-columns: 1fr;
   }
 }
+/* ============================================================
+   MONIELLE ALENCAR — FOREST & WALNUT COLOR PALETTE
+   Experimental Theme
+   ============================================================ */
+
+:root {
+
+  /* Main Forest Colors */
+  --color-primary: #2F3E2E;
+  --color-primary-light: #556B2F;
+  --color-primary-dark: #223024;
+
+  /* Earth / Botanical Accents */
+  --color-accent: #7B4B2A;
+  --color-accent-light: #8A9A5B;
+  --color-spruce: #556B2F;
+
+  /* Backgrounds */
+  --color-cream: #E7DDC8;
+  --color-cream-dark: #DED3BC;
+  --color-white: #FFFDF8;
+
+  /* Text */
+  --color-text: #263027;
+  --color-text-light: #5C6559;
+
+  /* Borders */
+  --color-border: #D2CCB9;
+  --color-border-warm: #C4B79D;
+}
+
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+.navbar {
+  background: rgba(231, 221, 200, 0.96);
+  border-bottom-color: var(--color-primary-light);
+  box-shadow: 0 4px 20px rgba(47, 62, 46, 0.10);
+}
+
+.nav-logo {
+  color: var(--color-primary);
+}
+
+.nav-logo-sub {
+  color: var(--color-accent);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary);
+  background: rgba(85, 107, 47, 0.14);
+}
+
+.lang-switcher {
+  background: rgba(47, 62, 46, 0.08);
+  border-color: var(--color-border-warm);
+}
+
+.lang-btn.active {
+  background: var(--color-primary);
+}
+
+
+/* ============================================================
+   HOMEPAGE HERO
+   ============================================================ */
+
+.moni-hero {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(47, 62, 46, 0.92) 0%,
+      rgba(85, 107, 47, 0.78) 55%,
+      rgba(123, 75, 42, 0.72) 100%
+    ),
+    url('../Photos/research-phd-forest.jpg') center/cover no-repeat;
+
+  border-bottom-color: var(--color-accent);
+}
+
+.moni-badge {
+  background: var(--color-accent);
+}
+
+.moni-hero-subtitle {
+  color: #DDE4B7;
+}
+
+.moni-hero-frame::before {
+  background: var(--color-accent);
+}
+
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.btn-primary {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.btn-primary:hover {
+  background: #8A5A35;
+  border-color: #8A5A35;
+}
+
+.btn-secondary:hover {
+  color: var(--color-primary);
+}
+
+
+/* ============================================================
+   PAGE HEADERS
+   ============================================================ */
+
+.moni-page-header {
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-cream) 0%,
+      var(--color-cream-dark) 100%
+    );
+
+  border-bottom-color: var(--color-border-warm);
+}
+
+.moni-page-tag {
+  color: var(--color-accent);
+}
+
+
+/* ============================================================
+   SECTION HEADINGS
+   ============================================================ */
+
+.section-header h2 {
+  color: var(--color-primary);
+}
+
+.section-line {
+  background: var(--color-accent);
+}
+
+
+/* ============================================================
+   QUOTE / CALLOUT BANNER
+   ============================================================ */
+
+.pptx-callout-banner {
+  background:
+    linear-gradient(
+      135deg,
+      #2F3E2E 0%,
+      #3E4F2E 55%,
+      #556B2F 100%
+    );
+
+  border-left-color: var(--color-accent);
+
+  box-shadow:
+    0 10px 28px rgba(47, 62, 46, 0.20);
+}
+
+.pptx-callout-banner::before {
+  color: rgba(138, 154, 91, 0.20);
+}
+
+
+/* ============================================================
+   RESEARCH / CONTENT CARDS
+   ============================================================ */
+
+.pillar-card {
+  border-top-color: var(--color-accent);
+  box-shadow: 0 6px 18px rgba(47, 62, 46, 0.07);
+}
+
+.pillar-card:hover {
+  border-top-color: var(--color-primary);
+  box-shadow: 0 12px 30px rgba(47, 62, 46, 0.14);
+}
+
+.pillar-card h3 {
+  color: var(--color-primary);
+}
+
+
+/* ============================================================
+   ABOUT / INTERESTS
+   ============================================================ */
+
+.interest-pill {
+  background: var(--color-cream-dark);
+  border-color: var(--color-border-warm);
+  border-left-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.interest-pill:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-left-color: var(--color-accent-light);
+}
+
+
+/* ============================================================
+   TIMELINE
+   ============================================================ */
+
+.timeline::before {
+  background: var(--color-accent);
+}
+
+.timeline-dot {
+  background: var(--color-primary);
+  border-color: var(--color-cream);
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+.timeline-degree {
+  color: var(--color-primary);
+}
+
+.timeline-meta {
+  color: var(--color-accent);
+}
+
+
+/* ============================================================
+   RESEARCH CARDS
+   ============================================================ */
+
+.research-badge-tag {
+  background: var(--color-primary-light);
+}
+
+.research-card-featured h3 {
+  color: var(--color-primary);
+}
+
+.trait-tag {
+  background: var(--color-cream-dark);
+  color: var(--color-primary);
+  border-color: var(--color-border-warm);
+}
+
+.pi-tag {
+  color: var(--color-accent);
+}
+
+
+/* ============================================================
+   SHARING & OUTREACH
+   ============================================================ */
+
+.sharing-card {
+  box-shadow: 0 6px 20px rgba(47, 62, 46, 0.07);
+}
+
+.sharing-card:hover {
+  box-shadow: 0 12px 30px rgba(47, 62, 46, 0.14);
+}
+
+
+/* ============================================================
+   GENERAL LINKS
+   ============================================================ */
+
+a {
+  color: var(--color-primary-light);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+
+/* ============================================================
+   TEXT SELECTION
+   ============================================================ */
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
