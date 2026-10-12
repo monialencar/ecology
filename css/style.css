@@ -1525,20 +1525,46 @@ a:hover {
   }
 }
 
-/* ===== Sharing & Outreach: Photo and Text Cards ===== */
+
+/* ===== Sharing & Outreach: Responsive Feature Cards ===== */
 
 .sharing-feature-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 20px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  grid-template-areas: "text photo";
+  gap: 28px;
+  align-items: start;
   margin-bottom: 40px;
   min-width: 0;
 }
 
-/* PHOTO CARD */
-.sharing-feature-photo {
+/* Text card — left on desktop */
+.sharing-feature-text {
+  grid-area: text;
   min-width: 0;
-  padding: 24px;
+  padding: 28px;
+  background: var(--color-white, #fffdf8);
+  border: 1px solid var(--color-border, #d2ccb9);
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.sharing-feature-text p {
+  margin: 0 0 18px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.sharing-feature-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Photo and caption in one card — right on desktop */
+.sharing-feature-photo {
+  grid-area: photo;
+  min-width: 0;
+  padding: 20px;
   background: var(--color-white, #fffdf8);
   border: 1px solid var(--color-border, #d2ccb9);
   border-radius: 18px;
@@ -1550,51 +1576,31 @@ a:hover {
   width: 100%;
   max-width: 100%;
   height: auto;
-  max-height: none;
+  max-height: 380px;
   object-fit: contain;
   object-position: center;
   margin: 0 auto;
   border-radius: 12px;
 }
 
-/* PHOTO CAPTION */
+/* Caption stays inside the photo card */
 .sharing-photo-caption {
   margin: 16px 0 0;
   padding-top: 14px;
   border-top: 1px solid var(--color-border, #d2ccb9);
   color: var(--color-text-light, #5c6559);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.65;
-  text-align: left;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
-/* TEXT CARD */
-.sharing-feature-text {
-  min-width: 0;
-  padding: 28px;
-  background: var(--color-white, #fffdf8);
-  border: 1px solid var(--color-border, #d2ccb9);
-  border-radius: 18px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-}
-
-.sharing-feature-text p {
-  margin-top: 0;
-  margin-bottom: 18px;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  overflow-wrap: break-word;
-}
-
-.sharing-feature-text p:last-child {
-  margin-bottom: 0;
-}
-
-/* MOBILE */
+/* Mobile: photo card first, text card second */
 @media (max-width: 700px) {
   .sharing-feature-layout {
     grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "photo"
+      "text";
     gap: 16px;
     margin-bottom: 30px;
   }
@@ -1606,8 +1612,8 @@ a:hover {
 
   .sharing-feature-photo img {
     width: 100%;
-    height: auto;
     max-height: none;
+    height: auto;
     object-fit: contain;
   }
 
